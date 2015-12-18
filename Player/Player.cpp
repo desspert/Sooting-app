@@ -1,0 +1,2 @@
+#include "Chara/Thunder.h"
+
