@@ -3,8 +3,9 @@
 #include "../../Player/Player.h"
 class GameMain{
 private:
-	Player player;
+	Player player_;
 public:
+	GameMain();
 	void Update();
 	void Draw();
 	void Setup();

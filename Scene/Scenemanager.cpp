@@ -2,13 +2,13 @@
 
 SceneManager::SceneManager()
 {
-	title = Texture("res/Texture/title.png");
-	Setup();
+	
+	
 }
 
 void SceneManager::Setup(){
 	scenechange = Scenename::Title;
-	
+	title_.Setup();
 }
 
 void SceneManager::Update(){
@@ -17,7 +17,7 @@ void SceneManager::Update(){
 
 		break;
 	case Scenename::GameMain:
-
+		gamemain_.Update();
 		break;
 	case Scenename::Result:
 
@@ -29,22 +29,12 @@ void SceneManager::Update(){
 void SceneManager::Draw(){
 	switch (scenechange){
 	case Scenename::Title:
-		drawTextureBox(
-			-300,
-			0,
-			1024,
-			1024,
-			0,
-			0,
-			1024,
-			1024,
-			title,
-			Color::white
-			);
+		title_.Draw();
+		
 
 		break;
 	case Scenename::GameMain:
-		
+		gamemain_.Draw();
 		break;
 	case Scenename::Result:
 
@@ -57,6 +47,9 @@ void SceneManager::Shift(){
 	switch (scenechange){
 	case Scenename::Title:
 		scenechange = title_.Shift();
+		if (scenechange == Scenename::GameMain){
+			gamemain_.Setup();
+		}
 		break;
 	case Scenename::GameMain:
 		scenechange = gamemain_.Shift();

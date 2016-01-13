@@ -3,8 +3,9 @@
 
 class Title{
 private:
-
+	Texture tx;
 public:
+	Title();
 	void Update();
 	void Draw();
 	void Setup();

@@ -1,4 +1,11 @@
 #include "GameMain.h"
+GameMain::GameMain(){
+	
+}
+
+void GameMain::Setup(){
+	player_.Setup();
+}
 
 Scenename GameMain::Shift(){
 
@@ -7,4 +14,12 @@ Scenename GameMain::Shift(){
 	}
 	return Scenename::GameMain;
 
+}
+
+void GameMain::Update(){
+	player_.Update();
+}
+
+void GameMain::Draw(){
+	player_.Draw();
 }

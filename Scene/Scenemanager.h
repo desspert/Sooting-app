@@ -1,7 +1,9 @@
+#pragma once
+
 #include "../Share.h"
 #include "Title/Title.h"
 #include "GameMain/GameMain.h"
-#pragma once
+
 #include "Result/Result.h"
 class SceneManager{
 private:
