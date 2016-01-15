@@ -1,7 +1,7 @@
 #pragma once
 #include "lib/framework.hpp"
 #include <iostream>
-#include <vector>
+#include <list>
 #define env App::get()
 
 enum WINDOW
@@ -28,25 +28,33 @@ enum class Scenename{
 };
 
 enum class BulletType{
-	Radiation1,
-	Radiation2,
-	Radiation3,
+	Normal1,
+	Normal2,
+	Normal3,
 	Laser1,
 	Laser2,
 	Laser3,
 	Spread1,
 	Spread2,
 	Spread3,
-	Access1,
-	Access2,
-	Access3,
+	Near1,
+	Near2,
+	Near3,
+	Horming1,
+	Horming2,
+	Horming3
 };
 
-struct BulletData{
-	Vec2f pos[50];
-	Vec2f size[50];
-	bool flag[50];
-	Vec2f angle[50];
-	int count;
-	
+enum class Type{
+	Fire,
+	Water,
+	Thunder,
+	Wood,
+	Metal
+};
+
+struct Chara{
+	int hp,attack;
+	BulletType bullet_type;
+	Type type;
 };

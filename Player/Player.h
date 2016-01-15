@@ -7,8 +7,8 @@ protected:
 	Vec2f pos;
 	Vec2f size;
 	Texture tx;
-	
-	std::vector<std::shared_ptr<Bullet>> bullets;
+	BulletType bullet_type;
+	std::list<std::shared_ptr<Bullet>> bullets;
 	
 	
 public:

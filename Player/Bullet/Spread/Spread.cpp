@@ -4,7 +4,7 @@ Spread::Spread(Vec2f pos,Vec2f size,int amount){
 	this->pos = pos;
 	this->size = size;
 	this->amount = amount;
-	speed = 5;
+	speed = 20;
 	angle = 2 * M_PI * amount / 20+M_PI/2;
 }
 

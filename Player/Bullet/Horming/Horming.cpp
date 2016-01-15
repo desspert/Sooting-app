@@ -3,7 +3,7 @@
 Horming::Horming(Vec2f pos,Vec2f size){
 	this->pos = pos;
 	this->size = size;
-	speed = 5;
+	speed = 20;
 	angle = 3*3.141592/2;
 	count = 0;
 }
@@ -18,8 +18,8 @@ void Horming::Update(Vec2f enemy_pos){
 	if (count < 120){
 		angle += (ax * by - ay * bx < 0) ? +3.141592 / 180 * 8 : -3.141592 / 180 * 8;
 	}
-	pos.x() += (int)(cos(angle) * 10);
-	pos.y() += (int)(sin(angle) * 10);
+	pos.x() += (int)(cos(angle) * speed);
+	pos.y() += (int)(sin(angle) * speed);
 }
 
 void Horming::Draw(){
