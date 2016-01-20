@@ -11,6 +11,6 @@ void Laser::Update(Vec2f enemy_pos){
 	pos.y() += speed;
 }
 
-void Laser::Draw(){
-	drawFillBox(pos.x(), pos.y(), size.x(), size.y(), Color::purple);
+void Laser::Draw(Color color){
+	drawFillBox(pos.x(), pos.y(), size.x(), size.y(), color);
 }

@@ -22,6 +22,6 @@ void Horming::Update(Vec2f enemy_pos){
 	pos.y() += (int)(sin(angle) * speed);
 }
 
-void Horming::Draw(){
-	drawFillBox(pos.x() + size.x() / 2, pos.y()+size.y() / 2, size.x(), size.y(), Color::blue, angle, Vec2f(1, 1), Vec2f(0, 0));
+void Horming::Draw(Color color){
+	drawFillBox(pos.x() + size.x() / 2, pos.y()+size.y() / 2, size.x(), size.y(), color, angle, Vec2f(1, 1), Vec2f(0, 0));
 }

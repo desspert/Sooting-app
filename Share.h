@@ -15,7 +15,7 @@ class App
 public:
 	static AppEnv& get()
 	{
-		static AppEnv Env(WIDTH, HEIGHT);
+		static AppEnv Env(WIDTH, HEIGHT,false,true);
 
 		return Env;
 	}
@@ -53,8 +53,3 @@ enum class Type{
 	Metal
 };
 
-struct Chara{
-	int hp,attack;
-	BulletType bullet_type;
-	Type type;
-};

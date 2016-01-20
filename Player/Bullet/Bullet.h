@@ -11,7 +11,7 @@ public:
 	Bullet() = default;
 
 	virtual void Update(Vec2f enemy_pos) = 0;
-	virtual void Draw() = 0;
+	virtual void Draw(Color color) = 0;
 
 	Vec2f getPos(){ return pos; }
 	Vec2f getSize(){ return size; }

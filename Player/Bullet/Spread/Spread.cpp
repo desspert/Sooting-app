@@ -14,6 +14,6 @@ void Spread::Update(Vec2f enemy_pos){
 	pos.y() += sin(angle)*speed;
 }
 
-void Spread::Draw(){
-	drawFillBox(pos.x(), pos.y(), size.x(), size.y(), Color::green,angle,Vec2f(1,1),Vec2f(size.x()/2,size.y()/2));
+void Spread::Draw(Color color){
+	drawFillBox(pos.x(), pos.y(), size.x(), size.y(),color,angle,Vec2f(1,1),Vec2f(size.x()/2,size.y()/2));
 }

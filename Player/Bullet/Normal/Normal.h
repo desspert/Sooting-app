@@ -9,5 +9,5 @@ public:
 	Normal(Vec2f pos, Vec2f size);
 
 	void Update(Vec2f enemy_pos);
-	void Draw();
+	void Draw(Color color);
 };
